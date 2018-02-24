@@ -1,3 +1,3 @@
 node /^vag-web-\d+$/ {
-  notify {'test': }
+  include role::web::load_balancer
 }

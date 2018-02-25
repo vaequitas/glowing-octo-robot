@@ -1,0 +1,8 @@
+#!/bin/bash
+set -eou pipefail
+
+readonly DIR="$(cd "$(dirname "$( dirname "${BASH_SOURCE[0]}" )")" && pwd)"
+cd "${DIR}"
+rm -rf "${DIR}/modules/forge/*"
+
+tar -xzf ./.dependencies/deps.tar.gz ./modules
